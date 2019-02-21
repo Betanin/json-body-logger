@@ -5,6 +5,7 @@ const app = express();
 
 const logRequest = (req, res) => {
     console.info(`${req.method} ${req.originalUrl}`);
+    console.info(JSON.stringify(req.headers));
     console.info(JSON.stringify(req.body));
     res.status(200).send("Ok");
 };
